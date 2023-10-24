@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway&display=swap');
+
+body{
+  background-color: black;
+  color: rgba(245, 245, 245, 0.8);
+  font-family: 'Raleway', sans-serif;
+  /* min-width: 550px; */
+}
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  overflow-y: scroll;
+}
+
+#logo {
+  width: 10em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+#logo:hover {
+  filter: drop-shadow(0 0 2em rgba(245, 245, 245, 0.55));
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  #logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+header, nav, main, section{
+  border-radius: 2em;
+  padding: .5em;
+  margin: .5em;
+}
+
+header{
+  background-color: rgba(172, 232, 148, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeInAnimation ease 8s;
+}
+
+nav{
+  background-color: rgba(247, 147, 76, 0.6);
+  display: inline-block;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  width: 30%;
+  font-size: 1.2em;
+  animation: fadeInAnimation ease 10s;
+}
+  .nav-icon{
+    width: 2em;
+    /* YES YES YES FOUND MARGIN:0 AUTO FOR UP AND DOWN */
+    vertical-align: middle;
+  }
+
+main{
+  width: 60%;
+  background-color: rgba(74, 49, 77, 0.6);
+  display: inline-block;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* align-items: center; */
+  animation: fadeInAnimation ease 12s;
+
+}
+
+section{
+  background-color: rgba(107, 101, 112, 0.6);
+  /* project specific */
+  width:25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#advertisement{
+  background-color: rgba(168, 186, 154, 0.6);
+  width: 100%;
+  font-size: 2em;
+}
+
+.container{
+  display: flex;
+}
+/* TAGS AND FORMS */
+a{
+  color: inherit;
+  font-weight: 500;
+  text-decoration: none;
+  background-color: rgba(66, 43, 27, 0.2);
+  border-radius: 2em;
+  padding: .2em .5em;
+  margin: .2em;
+  font-size: inherit;
+  /* text-transform: uppercase; */
+}
+a:hover{
+  color: rgba(172, 232, 148, 0.6);
+}
+
+
+/* SCROLLBAR */
+/* Hide the vertical scrollbar */
+::-webkit-scrollbar {
+  width: 0;
+}
+
+/* Hide the horizontal scrollbar (optional) */
+::-webkit-scrollbar-thumb {
+  width: 0;
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: none;
+}
+
+/* For Firefox, hide the horizontal scrollbar (optional) */
+* {
+  scrollbar-width: none;
+}
+
+/* PROJECT SPECIFIC */
+main img{
+  width: 100%;
+  vertical-align: middle;
+}
+
+h1{
+  font-size: 2em;
+}
+
+
+
+.hidden {
+  display: none;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+  section{
+      width: 100%
+  }
+  #logo{
+    width: 7em;
+  }
+  header{
+    margin: 0 auto;
+  }
+}
+
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  inherit {
+      opacity: 1;
+  }
+}
+
