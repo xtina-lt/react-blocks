@@ -15,20 +15,21 @@ const Advertisement = () => {
 
     // CHANGE THE QUOTE EVERY 30 SECONDS
     useEffect ( () => {
+        let keepGoing = true
         // setInterval( callback, time)
         // callback: ()=> || () => {} || function()
         setInterval( ()=> {
             // change random index
             // make sure it isn't the same index
-            while (true) {
+            while (keepGoing) {
                 let num = Math.floor( Math.random() * arr.length )
-                if (num != index) {
+                if (num !== index) {
                     setIndex(num);
-                    break;
+                    keepGoing = false;
                 }
             }
             // change the quote every 10 seconds
-        }, 10000) // end of setinterval
+        }, 3000) // end of setinterval
     }, [index, arr]) // UPDATE THESE TWO VALUES
 
 
